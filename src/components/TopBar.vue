@@ -1,28 +1,28 @@
 <template>
     <nav class="navbar navbar-light">
         <div class="container">
-            <router-link :to="{ name: 'home' }">
+            <router-link :to="{ name: 'globalFeed' }">
                 MediumClone
             </router-link>
             <ul class="navbar navbar-nav pull-xs-right">
                 <li class="nav-item">
-                    <router-link class="nav-link" :to="{ name: 'home' }" exact active-class="active">
+                    <router-link class="nav-link" :to="{ name: 'globalFeed' }" exact active-class="active">
                         Home
                     </router-link>
                 </li>
                 <template v-if="isLoggedIn">
                     <li class="nav-item">
-                        <router-link class="nav-link" :to="{ name: 'createArticle' }" active-class="active">
+                        <router-link class="nav-link" :to="{ name: 'globalFeed' }" active-class="active">
                             <i class="ion-compose"></i> &nbsp; New Article
                         </router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" :to="{ name: 'settings' }" active-class="active">
+                        <router-link class="nav-link" :to="{ name: 'globalFeed' }" active-class="active">
                             <i class="ion-gear-a"></i> &nbsp; Settings
                         </router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" :to="{ name: 'userProfile', params: { slug: currentUser.username } }"
+                        <router-link class="nav-link" :to="{ name: 'globalFeed', params: { slug: currentUser.username } }"
                             active-class="active">
                             <img class="user-pic" :src="currentUser.image" />
                             &nbsp;
@@ -61,3 +61,8 @@ export default {
     }
 }
 </script>
+<style scoped>
+ul {
+    list-style-type: none;
+}
+</style>
